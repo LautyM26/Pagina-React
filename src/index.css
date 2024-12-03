@@ -1,0 +1,34 @@
+a {
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  background-color: seagreen;
+  align-items: center; 
+}
+
+.logo {
+  padding: 15px;
+  width: 100px; 
+  height: 100px;
+}
+
+.navbar a {
+  font-size: 20px;
+  color: white;
+  margin-left: 40px;
+}
+
+.carrito {
+  margin: 15px;
+}
+
+body {
+  background-color: bisque;
+}
+
+a {
+  text-decoration: none;
+}
