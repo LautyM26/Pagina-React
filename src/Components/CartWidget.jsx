@@ -7,7 +7,7 @@ function CartWidget () {
 
   return (
     <Badge badgeContent={cartItemCount} color="secondary">
-      <ShoppingCartIcon style={{ color: 'white', fontSize: '2rem' }} />
+      <ShoppingCartIcon style={{ color: 'black', fontSize: '2rem' }} />
     </Badge>
   )
 }

@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'https://LautyM26.github.io/Pagina-de-tecnologia'
+  base: 'https://LautyM26.github.io'
 })

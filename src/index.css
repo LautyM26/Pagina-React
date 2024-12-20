@@ -5,7 +5,7 @@ a {
 }
 
 .header {
-  background-color: seagreen;
+  background-color: bisque;
   align-items: center; 
 }
 
@@ -26,9 +26,9 @@ a {
 }
 
 body {
-  background-color: bisque;
+  background-color: rgb(173, 155, 132) !important;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
