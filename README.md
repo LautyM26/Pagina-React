@@ -43,6 +43,10 @@ El proyecto utiliza las siguientes tecnologías y bibliotecas:
     
     -   Documentación oficial: https://reactjs.org/docs/react-dom.html
         
+7.  **SweetAlert2**: Biblioteca para mostrar alertas personalizadas y modernas.
+    
+    -   Documentación oficial: https://sweetalert2.github.io/
+        
 
 ## Características Principales
 
@@ -54,7 +58,8 @@ El proyecto utiliza las siguientes tecnologías y bibliotecas:
     
 -   **Proceso de compra**: Los usuarios pueden finalizar la compra desde el carrito.
     
-
+-   **Alertas personalizadas**: Uso de SweetAlert2 para notificaciones amigables y estilizadas en eventos como agregar productos al carrito o finalizar una compra.
+    
 
 ## Estructura del Proyecto
 
@@ -67,9 +72,3 @@ El proyecto está organizado de la siguiente manera:
   /services      # Configuración de Firebase y otros servicios
   /styles        # Archivos de estilo
 ```
-
-    
-
-## Licencia
-
-Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
