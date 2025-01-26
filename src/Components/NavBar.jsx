@@ -1,37 +1,31 @@
-import React from "react";
+import React from "react"
+import CartWidget from "./CartWidget.jsx"
+import logo from "../assets/Logo.webp"
+import { Link } from "react-router"
+import { Navbar, Nav, Container } from "react-bootstrap"
 
-import CartWidget from "./CartWidget.jsx";
-import logo from "../assets/Logo.webp";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import { Link } from "react-router";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function NavBar() {
     return (
         <header className="header d-flex justify-content-between">
-            <div>
-                <img src={logo} alt="logo" className="logo" />
-            </div>
-            <div>
+            <img src={logo} alt="logo" className="logo" />
+           
                 <Navbar bg="dark" variant="dark">
                     <Container>
                         <Navbar.Brand as={Link} to="/">Inicio</Navbar.Brand>
                         <Nav className="me-auto">
-                            <Nav.Link  to="/category/beauty" as={Link}>Beauty</Nav.Link>
-                            <Nav.Link  to="/category/fragrances" as={Link}>fragrances</Nav.Link>
-                            <Nav.Link  to="/category/furniture" as={Link}>furniture</Nav.Link>
-                            <Nav.Link  to="/category/groceries" as={Link}>groceries</Nav.Link>
+                            <Nav.Link as={Link} to="/category/Consolas">Consolas</Nav.Link>
+                            <Nav.Link as={Link} to="/category/Computadoras">Computadoras</Nav.Link>
+                            <Nav.Link as={Link} to="/category/Videojuegos">Videojuegos</Nav.Link>
+                            <Nav.Link as={Link} to="/category/Accesorios">Accesorios</Nav.Link>
                         </Nav>
                     </Container>
                 </Navbar>
-            </div>
-            <div className="carrito">
-                <CartWidget />
-            </div>
+            
+            <CartWidget/>
         </header>
     );
 }
 
-export default NavBar;
+export default NavBar

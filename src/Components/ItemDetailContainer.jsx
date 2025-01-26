@@ -1,32 +1,23 @@
-import React from 'react';
-import ItemCount from './ItemCount.jsx';
-import ItemDetail from './ItemDetail.jsx';
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router';
+import React from 'react'
+import ItemDetail from './ItemDetail.jsx'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router'
+import { getProduct } from '../firebase/db.js'
 
 function ItemDetailContainer () {
     const { id } = useParams()
     const [item, setItem] = useState()
 
     useEffect ( () => {
-        fetch(`https://dummyjson.com/products/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                setItem(data); // Guarda el producto en el estado
-                setLoading(false); // Termina el estado de carga
-            })
-            .catch(err => {
-                console.error("Error fetching product details:", err);
-                setLoading(false); // Asegúrate de terminar el estado de carga incluso si hay un error
-            });
+        getProduct(id)  
+            .then(res => setItem(res))  
     }, [id]);
 
     return (
-    <div>
-        <ItemDetail item={item} />
-        <ItemCount />
-    </div>
+        <div className="item-detail-container">
+            <ItemDetail item={item}/>
+        </div>
     )
 }
 
-export default ItemDetailContainer;
+export default ItemDetailContainer

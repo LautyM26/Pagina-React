@@ -1,15 +1,16 @@
-import React from 'react';
-import Badge from '@mui/material/Badge';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import React from 'react'
+import { Link } from 'react-router'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
 function CartWidget () {
-  const cartItemCount = 4; 
+  const { getQty } = useContext(CartContext)
 
   return (
-    <Badge badgeContent={cartItemCount} color="secondary">
-      <ShoppingCartIcon style={{ color: 'black', fontSize: '2rem' }} />
-    </Badge>
+    <Link to = '/cart' className = 'text-black text-decoration-none'>
+     🛒 {getQty()}
+    </Link>
   )
 }
 
-export default CartWidget;
+export default CartWidget
